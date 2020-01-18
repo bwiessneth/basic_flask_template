@@ -24,3 +24,10 @@ supervisorctl status basic_flask_template
 supervisorctl start basic_flask_template
 supervisorctl stop basic_flask_template
 ```
+
+
+# Random
+
+```
+pkill -F project_name.pid
+```
