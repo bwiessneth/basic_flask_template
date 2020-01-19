@@ -12,6 +12,11 @@ pip install -r deploy/requirements.txt
 
 ## Setup nginx 
 
+Create an endpoint where the app will be served from. On uberspace you'll want to use the built-in ```uberspace``` tool
+
+```
+
+```
 
 
 ## Use supervisord to monitor and control your processes 
