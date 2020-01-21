@@ -86,8 +86,10 @@ Using Werkzeug for development
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can use Werkzeug which get's shipped with Flask to spin up a small development server. But be aware: **Do not use it in a production deployment.** For more info head to https://www.palletsprojects.com/p/werkzeug/.
+
 To start Werkzeug execute ``run_werkzeug.sh`` from within the application directory.
 It enables the virtual python environment and uses executes ``app.py``.
+
 Once its running try to access it at https://isabell.uber.space/basic_flask_template. Stop it by pressing ``Ctrl + C``.
 
 ::
@@ -110,12 +112,14 @@ Once its running try to access it at https://isabell.uber.space/basic_flask_temp
 
 UWSGI
 ^^^^^
+
 A more suited approach to serve your application would be to use uWSGI.
 The uWSGI project aims at developing a full stack for building hosting services.  For more info head to https://uwsgi-docs.readthedocs.io/en/latest/.
 
 To serve your application via uWSGI execute the ``run_uwsgi.sh`` script from within the application directory.
 It enables the virtual python environment and uses the configuration parameter found in ``uwsgi.ini``.
 The application is loaded from ``uwsgi_app.py``, which justs imports the ``app`` object from ``app.py``.
+
 Once its running try to access it at https://isabell.uber.space/basic_flask_template. Stop it by pressing ``Ctrl + C``.
 
 ::
