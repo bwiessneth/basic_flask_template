@@ -33,7 +33,7 @@ def index():
 	message = "Hello from basic_flask_template"
 	return render_template('index.html', message=message)
 
-
+# If app.py is run directly start in debug mode
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=1024, debug=True)
 
