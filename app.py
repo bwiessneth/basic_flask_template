@@ -24,8 +24,10 @@ class PrefixMiddleware(object):
             start_response('404', [('Content-Type', 'text/plain')])
             return ["This url does not belong to the app.".encode()]
 
+# Set the prefix for serving the app. Uncomment if '/' shall be used
 app.wsgi_app = PrefixMiddleware(app.wsgi_app, prefix='/basic_flask_template')
 
+# index endpoint
 @app.route("/")
 def index():
 	message = "Hello from basic_flask_template"
