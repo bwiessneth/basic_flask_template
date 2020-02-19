@@ -21,11 +21,11 @@ class PrefixMiddleware(object):
             start_response('404', [('Content-Type', 'text/plain')])
             return ["This url does not belong to the app.".encode()]
 
-app.wsgi_app = PrefixMiddleware(app.wsgi_app, prefix='/project_name')
+app.wsgi_app = PrefixMiddleware(app.wsgi_app, prefix='/basic_flask_template')
 
 @app.route("/")
 def index():
-	message = "Hello from project_name"
+	message = "Hello from basic_flask_template"
 	return render_template('index.html', message=message)
 
 
