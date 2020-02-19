@@ -7,6 +7,9 @@ app = Flask(__name__)
 
 
 class PrefixMiddleware(object):
+    """
+    Class to enable serving the app from a prefix
+    """
 
     def __init__(self, app, prefix=''):
         self.app = app
